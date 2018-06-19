@@ -12,6 +12,7 @@ const static = express.static;
 app.engine('.hbs', expressHbs({defaultLayout: 'layout', extname: '.hbs'}));
 app.set('view engine', '.hbs');
 
+
 //using static file folder
 app.use(static('public'));
 // app.use(express.static('public/images')); 
