@@ -4,8 +4,7 @@ const express = require('express');
 const app = express();
 const expressHbs = require('express-handlebars');
 
-//make a variable to refer to
-//the built-in express static
+//make a variable to refer to the built-in express static
 //files
 const static = express.static;
 
@@ -38,16 +37,17 @@ app.get('/menu', (req, res) => {
     res.render('menu', {
         imagesFolder: '\/images\/',
         images: [
-          'two',
-          'three',
-          'four',
-          'five'
+            // 'one',
+            'two',
+            'three',
+            'four',
+            'five'
         ]
     });
 });
 
 
-app.get('*', () => {
+app.get('/*', (req, res) => {
     res.send('Hold tight - this page will soon be created!');
 });
 
